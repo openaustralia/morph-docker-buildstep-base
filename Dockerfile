@@ -3,4 +3,8 @@
 FROM progrium/cedarish
 MAINTAINER Matthew Landauer <matthew@oaf.org.au>
 
+RUN mkdir /app
+VOLUME /data
+RUN ln -s /data/data.sqlite /app/data.sqlite
+
 RUN apt-get install -y libblas-dev liblapack-dev gfortran swig protobuf-compiler libprotobuf-dev libsqlite3-dev time
