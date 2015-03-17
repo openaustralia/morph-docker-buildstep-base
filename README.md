@@ -7,3 +7,8 @@ installed that we want to use.
 
 So, if you need an extra library installed in Morph.io this is the likely repo that you will need
 to modify.
+
+After updating this repo
+1. Push to github. This will trigger an automatic build on the Docker Hub
+2. On the Docker Hub manually start a build of [openaustralia/buildstep](https://registry.hub.docker.com/u/openaustralia/buildstep/)
+3. Either deploy morph.io to force latest images to be downloaded or ssh to morph.io and `docker pull openaustralia/buildstep`
