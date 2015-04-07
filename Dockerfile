@@ -15,6 +15,9 @@ ADD profile /root/.profile
 ADD mitmproxy-ca-cert.pem /usr/local/share/ca-certificates/mitmproxy-ca-cert.crt
 RUN update-ca-certificates
 
+# Add prerun script which will disable output buffering for ruby
+ADD prerun.rb /usr/local/lib/prerun.rb
+
 # poppler-utils has a more recent pdftohtml than the pdftohtml package
 # pdftohtml is needed by the python scraperwiki library
 # libffi-dev needed by python cffi
