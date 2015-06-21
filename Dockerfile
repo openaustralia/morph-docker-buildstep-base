@@ -23,5 +23,3 @@ ADD prerun.rb /usr/local/lib/prerun.rb
 # libffi-dev needed by python cffi
 # time is needed directly by morph.io for scraper run measurements
 RUN apt-get install -y time libblas-dev liblapack-dev gfortran swig protobuf-compiler libprotobuf-dev libsqlite3-dev poppler-utils libffi-dev phantomjs
-
-ADD python-requests.sh /etc/profile.d/python-requests.sh
