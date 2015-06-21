@@ -4,8 +4,12 @@ FROM progrium/cedarish
 MAINTAINER Matthew Landauer <matthew@oaf.org.au>
 
 RUN mkdir /app
-# Get rid of annoying error message "stdin: is not a tty"
-ADD profile /root/.profile
+
+# Commented out to see if it's needed anymore now that we're not running
+# commands inside of a shell
+# # Get rid of annoying error message "stdin: is not a tty"
+# ADD profile /root/.profile
+
 # Add certificate authority used by mitmproxy
 # NB This certificate expires in 2016
 # Also needs to be identical to the cert at mitmproxy/mitmproxy-ca-cert.pem in
