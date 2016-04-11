@@ -11,6 +11,6 @@ to modify.
 After updating this repo:
 
 1. Push to github. This will trigger an automatic build on the Docker Hub and should (fingers crossed)
-also automatically trigger a build of [openaustralia/buildstep](https://registry.hub.docker.com/u/openaustralia/buildstep/)
+also automatically trigger a build of [openaustralia/buildstep](https://hub.docker.com/r/openaustralia/buildstep/)
 2. Wait until the build of openaustralia/buildstep is complete
 3. Either deploy morph.io to force latest images to be downloaded or ssh to morph.io and `docker pull openaustralia/buildstep`
