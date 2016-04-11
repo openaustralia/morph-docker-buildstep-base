@@ -11,7 +11,6 @@ RUN mkdir /app
 # ADD profile /root/.profile
 
 # Add certificate authority used by mitmproxy
-# NB This certificate expires in 2016
 # Also needs to be identical to the cert at mitmproxy/mitmproxy-ca-cert.pem in
 # https://github.com/openaustralia/morph
 ADD mitmproxy-ca-cert.pem /usr/local/share/ca-certificates/mitmproxy-ca-cert.crt
