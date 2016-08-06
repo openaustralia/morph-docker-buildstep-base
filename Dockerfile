@@ -24,3 +24,9 @@ ADD prerun.rb /usr/local/lib/prerun.rb
 # libffi-dev needed by python cffi
 # time is needed directly by morph.io for scraper run measurements
 RUN apt-get update && apt-get install -y time libblas-dev liblapack-dev gfortran swig protobuf-compiler libprotobuf-dev libsqlite3-dev poppler-utils libffi-dev phantomjs
+
+# Make python pip use the new ca certificate. Wouldn't it be great if it used
+# the system ca certificates by default? Well, it doesn't.
+# Setting the PIP_CERT environment variable didn't work but this does
+# TODO Remove this once compiles don't send traffic to mitmproxy
+ADD pip.conf /etc/pip.conf
